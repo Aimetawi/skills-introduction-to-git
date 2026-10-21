@@ -46,7 +46,7 @@ jobs:
           sed -i "s/\${RepoName}/${RepositoryName}/g" "$SETTINGS_FILE"
 
       - name: Commit updated devcontainer.json
-        uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v11
         with:
           add: ".devcontainer/devcontainer.json"
           message: "Set repository name"
