@@ -62,7 +62,7 @@ jobs:
       - name: Verify current commit is the latest commit
         id: check-current-head-location
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           previous_head: ${{ github.event.client_payload.previous_head }}
           new_head: ${{ github.event.client_payload.new_head }}
