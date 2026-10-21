@@ -62,7 +62,7 @@ jobs:
       - name: Check for high score tracker merge commit
         id: check-for-high-score-tracker-merge-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "tracker"
@@ -85,7 +85,7 @@ jobs:
       - name: Check for calculate level commit (FF merge)
         id: check-calculate-level-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "calculate level"

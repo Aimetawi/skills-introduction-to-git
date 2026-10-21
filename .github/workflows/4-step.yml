@@ -63,7 +63,7 @@ jobs:
       - name: Check for html element commit
         id: check-for-html-element-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "element"
@@ -86,7 +86,7 @@ jobs:
       - name: Check for pattern commit
         id: check-for-pattern-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "pattern"

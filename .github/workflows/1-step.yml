@@ -63,7 +63,7 @@ jobs:
       - name: Check for modification to global git config
         id: check-for-global-config-change
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           config_type: ${{ github.event.client_payload.config_type }}
         with:

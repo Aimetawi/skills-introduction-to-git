@@ -62,7 +62,7 @@ jobs:
       - name: Check for initial commit
         id: check-for-initial-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "initial"
@@ -85,7 +85,7 @@ jobs:
       - name: Check for game docs commit
         id: check-for-game-docs-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "game"
@@ -108,7 +108,7 @@ jobs:
       - name: Check for developer docs commit
         id: check-for-developer-docs-commit
         continue-on-error: true
-        uses: actions/github-script@v6
+        uses: actions/github-script@v9
         env:
           commit_messages: ${{ toJson(github.event.client_payload.branch_commit_messages) }}
           keyword: "developer"
